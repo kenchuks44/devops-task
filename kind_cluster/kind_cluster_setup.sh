@@ -6,7 +6,7 @@ sudo apt install docker.io
 
 # install kubectl
 sudo apt-get update && sudo apt-get install -y apt-transport-https gnupg-curl
-curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 sudo apt-get update
 sudo apt-get install -y kubectl
@@ -27,7 +27,7 @@ apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
 - role: control-plane
   extraPortMappings:
-    - containerPort: 3000
-      hostPort: 3000
+    - containerPort: 30201
+      hostPort: 30201
       listenAddress: "0.0.0.0"
 EOF
