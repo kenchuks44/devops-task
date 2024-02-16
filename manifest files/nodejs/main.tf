@@ -9,13 +9,8 @@ terraform {
   }
 }
 
-provider "kubectl" {
-  config_context_cluster  = "ken-cluster"
-  config_path = "/home/ubuntu"
-  load_config_file = false
-}
 
-resource "kubectl_manifest" "example" {
+resource "kubectl_manifest" "nodejsapp" {
   yaml_body = <<YAML
 apiVersion: apps/v1
 kind: Deployment
