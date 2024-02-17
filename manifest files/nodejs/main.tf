@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: nodejs-app
-          image: nodejs-1.0
+          image: kenchuks44/my-repo:nodejs-1.0
           ports:
             - containerPort: 3000
 YAML
